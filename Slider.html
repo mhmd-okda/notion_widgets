@@ -17,6 +17,34 @@
             #main-slider {
                 height: 50vh !important; /* Limits height on mobile */
             }
+            /* Ensure the slider containers do not have extra margin or padding */
+.splide {
+    margin: 0;
+    padding: 0;
+}
+
+/* Make sure the thumbnail slider does not push extra space */
+#thumbnail-slider {
+    margin-top: -20px; /* Adjust this value if needed */
+}
+
+/* Prevent any unwanted height issues */
+.splide__track {
+    overflow: hidden;
+}
+
+/* Fix potential mobile layout issues */
+@media (max-width: 768px) {
+    #main-slider {
+        height: auto !important;
+    }
+
+    #thumbnail-slider {
+        height: auto !important;
+        margin-top: -10px; /* Adjust this as needed */
+    }
+}
+
         }
     </style>
 </head>
