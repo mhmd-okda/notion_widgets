@@ -12,40 +12,6 @@
             height: auto;
             object-fit: cover;
         }
-
-        @media (max-width: 768px) {
-            #main-slider {
-                height: 50vh !important; /* Limits height on mobile */
-            }
-            /* Ensure the slider containers do not have extra margin or padding */
-.splide {
-    margin: 0;
-    padding: 0;
-}
-
-/* Make sure the thumbnail slider does not push extra space */
-#thumbnail-slider {
-    margin-top: -20px; /* Adjust this value if needed */
-}
-
-/* Prevent any unwanted height issues */
-.splide__track {
-    overflow: hidden;
-}
-
-/* Fix potential mobile layout issues */
-@media (max-width: 768px) {
-    #main-slider {
-        height: auto !important;
-    }
-
-    #thumbnail-slider {
-        height: auto !important;
-        margin-top: -10px; /* Adjust this as needed */
-    }
-}
-
-        }
     </style>
 </head>
 <body>
@@ -54,10 +20,10 @@
     <section id="main-slider" class="splide">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097784-06926a3eace4?q=80&w=2111&auto=format&fit=crop" alt="Top view"></li>
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097773-560eba487781?q=80&w=2111&auto=format&fit=crop" alt="Front view"></li>
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101352924-db9c779283c2?q=80&w=2111&auto=format&fit=crop" alt="Left view"></li>
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740097504555-ee96a96d980d?q=80&w=2111&auto=format&fit=crop" alt="Back view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097784-06926a3eace4?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097773-560eba487781?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Front view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101352924-db9c779283c2?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Left view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740097504555-ee96a96d980d?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Back view"></li>
             </ul>
         </div>
     </section>
@@ -66,25 +32,21 @@
     <section id="thumbnail-slider" class="splide">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097784-06926a3eace4?q=80&w=2111&auto=format&fit=crop" alt="Top view"></li>
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097773-560eba487781?q=80&w=2111&auto=format&fit=crop" alt="Front view"></li>
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101352924-db9c779283c2?q=80&w=2111&auto=format&fit=crop" alt="Left view"></li>
-                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740097504555-ee96a96d980d?q=80&w=2111&auto=format&fit=crop" alt="Back view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097784-06926a3eace4?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101097773-560eba487781?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Front view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740101352924-db9c779283c2?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Left view"></li>
+                <li class="splide__slide"><img src="https://images.unsplash.com/photo-1740097504555-ee96a96d980d?q=80&w=2111&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Back view"></li>
             </ul>
         </div>
     </section>
 
     <script>
-        function updateSliderHeight() {
-            return window.innerWidth > 768 ? 0.5 : 0.3; // Adjust height dynamically
-        }
-
         var main = new Splide( '#main-slider', {
             type       : 'fade',
-            heightRatio: updateSliderHeight(),
+            heightRatio: 0.5,
             pagination : false,
             arrows     : false,
-            cover      : true,
+            cover           : true,
         });
 
         var thumbnails = new Splide( '#thumbnail-slider', {
@@ -101,12 +63,6 @@
         main.sync( thumbnails );
         main.mount();
         thumbnails.mount();
-
-        // Update height on window resize
-        window.addEventListener('resize', function() {
-            main.options.heightRatio = updateSliderHeight();
-            main.mount();
-        });
     </script>
 
 </body>
