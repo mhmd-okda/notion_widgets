@@ -46,7 +46,17 @@
             heightRatio: 0.5,
             pagination : false,
             arrows     : false,
-            cover      : true,
+            cover           : true,
+  dragMinThreshold: {
+    mouse: 4,
+    touch: 10,
+  },
+  breakpoints : {
+    640: {
+      fixedWidth  : 66,
+      fixedHeight : 38,
+    },
+
         });
 
         var thumbnails = new Splide( '#thumbnail-slider', {
